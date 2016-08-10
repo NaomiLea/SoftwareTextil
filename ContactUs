@@ -1,0 +1,8 @@
+<form>
+  Company<br>
+  <input type="text" name="companyname"><br>
+  Contact Person<br>
+  <input type="text" name="contactname">
+  Phone number
+  <input type="number" name="phonenumber" min="6" max="15">
+</form>

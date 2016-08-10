@@ -1,0 +1,18 @@
+.formstyle {
+
+	border: solid;
+	border-color: lightgrey;
+	margin: 10px 10px 10px 10px;
+	background-color: lightgrey; 
+	padding: 10px 10px 10px 10px;
+	size: 500px;
+
+}
+
+input {
+margin: 10px 10px 10px 10px;
+}
+
+h1 {
+	font-size: 20px;
+}
