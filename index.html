@@ -11,11 +11,11 @@
 <body>
     <div class='navbar navbar-default navbar-static-top'>
         <div class='container'>
-            <a href='Pictures/logo.png' class='navbar-brand'><img src="Pictures/logo.png"></a>
+            <a href='index.html' class='navbar-brand'><img src="Pictures/logo.png"></a>
             <ul class='nav navbar-nav navbar-right'>
-                <li><a href='tickets.html'>Products</a></li>
-              <li><a href='ContactUs.html' data-toggle="modal" data-target="#myModal">Contact</a></li>
-                <li><a href='about.html'>About</a></li>
+                <li><a href='products.html'>Products</a></li>
+                <li><a data-toggle="modal" data-target="#myModal">Contact</a></li>
+                <li><a data-toggle="modal" data-target="#aboutModal">About</a></li>
             </ul>
         </div>
     </div>
@@ -31,7 +31,7 @@
                     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Contact Us</button>
                     <div class="modal fade" id="myModal" role="dialog">
                         <div class="modal-dialog">
-                            <!-- Modal content-->
+                            <!-- Modal content Contact us-->
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -39,9 +39,6 @@
                                 </div>
                                 <div class="modal-body">
                                     <form class="form" action="#" id="contact">
-                                        <h3>Contact Form</h3>
-                                        <hr/>
-                                        <br/>
                                         <label>Name: <span>*</span></label>
                                         <br/>
                                         <input type="text" id="name" placeholder="Name" />
@@ -52,9 +49,9 @@
                                         <input type="text" id="email" placeholder="Email" />
                                         <br/>
                                         <br/>
-                                        <label>Contact No: <span>*</span></label>
+                                        <label>Phone number: <span>*</span></label>
                                         <br/>
-                                        <input type="text" id="contactno" placeholder="10 digit Mobile no." />
+                                        <input type="text" id="contactno" placeholder="Phone number" />
                                         <br/>
                                         <br/>
                                         <label>Message:</label>
@@ -69,6 +66,23 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--about modal-->
+                    <div class="modal fade" id="aboutModal" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content Contact us-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Om oss</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -314,7 +328,7 @@
                     <h4>Stay in Touch</h4>
                     <ul class='list-unstyled'>
                         <li><a href='about.html'>About</a></li>
-                        <li><a href='contactUs.html'>Contact Us</a></li>
+                        <li><a href='ContactUs.html' data-toggle="modal" data-target="#myModal">Contact Us</a></li>
                         <li><a href='https://www.facebook.com/SoftwareTextil/?fref=ts'>Facebook</a></li>
                     </ul>
                 </div>
