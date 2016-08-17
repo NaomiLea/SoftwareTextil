@@ -6,6 +6,10 @@
     <link href='css/bootstrap.min.css' rel='stylesheet'>
     <link href='css/main.css' rel='css/Stylesheet'>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="jquery-3.0.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
     <script src="products.js"></script>
 </head>
 
@@ -20,18 +24,26 @@
             </ul>
         </div>
     </div>
-    <div class="row">
-        <div class="tabbable tabs-left">
-            <ul class="nav nav-tabs">
-                <li><a href="#a" data-toggle="tab">One</a></li>
-                <li class="active"><a href="#b" data-toggle="tab">Two</a></li>
-                <li><a href="#c" data-toggle="tab">Twee</a></li>
+    <div class="container" ng-init="tab =1">
+        <h3>Vertical Pills</h3>
+        <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="productTabs"><a href="#Towels" ng-click="tab = 1">Towels</a></li>
+                <li class="productTabs"><a href="#sheets" ng-click="tab = 2">Sheets</a></li>
+                <li class="productTabs"><a href="#clothes" ng-click="tab = 3">Clothes</a></li>
             </ul>
-            <div class="tab-content">
-                <div class="tab-pane active" id="a">Lorem ipsum dolor sit amet, charetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero.</div>
-                <div class="tab-pane" id="b">Secondo sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet augue.</div>
-                <div class="tab-pane" id="c">Thirdamuno, ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae. </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3" id="Towels" ng-show="tab === 1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
+            <div class="col-md-3" id="sheets" ng-show="tab === 2">
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="col-md-3" id="clothes" ng-show="tab === 3">
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+            <div class="clearfix visible-lg"></div>
         </div>
     </div>
 </body>

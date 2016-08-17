@@ -1,8 +1,8 @@
-$('#myTab a').click(function (e) {
-	 e.preventDefault();
-	 $(this).tab('show');
+$(document).ready(function(){
+$(".productTabs").click(function(){
+
+$(this).css("background-color", "white");
 });
 
-$(function () {
-$('#myTab a:last').tab('show');
-})
+
+});

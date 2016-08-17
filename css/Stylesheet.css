@@ -414,3 +414,9 @@ h1 {
     border-color: #ddd transparent #ddd #ddd;
     *border-right-color: #ffffff;
 }
+
+.productTabs {
+    background-color: #154365;
+    color: grey;
+    border-radius: 10px
+}
