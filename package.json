@@ -1,0 +1,22 @@
+{
+  "name": "softwaretextil",
+  "version": "1.0.0",
+  "description": "\"# SoftwareTextil\"",
+  "main": "angular.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NaomiLea/SoftwareTextil.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NaomiLea/SoftwareTextil/issues"
+  },
+  "homepage": "https://github.com/NaomiLea/SoftwareTextil#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head >
     <title>Software Textil</title>
     <link href='css/bootstrap.min.css' rel='stylesheet'>
     <link href='css/main.css' rel='css/Stylesheet'>
@@ -14,38 +14,54 @@
 </head>
 
 <body>
-    <div class='navbar navbar-default navbar-static-top'>
-        <div class='container'>
-            <a href='index.html' class='navbar-brand'><img src="Pictures/logo.png"></a>
-            <ul class='nav navbar-nav navbar-right'>
-                <li><a href='tickets.html'>Products</a></li>
-                <li><a data-toggle="modal" data-target="#myModal">Contact</a></li>
-                <li><a data-toggle="modal" data-target="#aboutModal">About</a></li>
-            </ul>
-        </div>
+    <div ng-app="products">
+  <div class='navbar navbar-default navbar-static-top'>
+    <div class='container'>
+      <a href='index.html' class='navbar-brand'>
+        <img src="Pictures/logo.png">
+      </a>
+      <ul class='nav navbar-nav navbar-right'>
+        <li><a href='tickets.html'>Products</a>
+        </li>
+        <li><a data-toggle="modal" data-target="#myModal">Contact</a>
+        </li>
+        <li><a data-toggle="modal" data-target="#aboutModal">About</a>
+        </li>
+      </ul>
     </div>
-    <div class="container" ng-init="tab =1">
-        <h3>Vertical Pills</h3>
-        <div class="col-md-3">
-            <ul class="nav nav-pills nav-stacked">
-                <li class="productTabs"><a href="#Towels" ng-click="tab = 1">Towels</a></li>
-                <li class="productTabs"><a href="#sheets" ng-click="tab = 2">Sheets</a></li>
-                <li class="productTabs"><a href="#clothes" ng-click="tab = 3">Clothes</a></li>
-            </ul>
-        </div>
-        <div class="row">
-            <div class="col-md-3" id="Towels" ng-show="tab === 1">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="col-md-3" id="sheets" ng-show="tab === 2">
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            <div class="col-md-3" id="clothes" ng-show="tab === 3">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-            </div>
-            <div class="clearfix visible-lg"></div>
-        </div>
+  </div>
+  <div class="container" ng-controller="TabController">
+    <h3>Vertical Pills</h3>
+    <div class="col-md-3">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="productTabs" ng-class="{active:selectedTab == 1}"><a ng-click="setTab(1)">Towels</a>
+        </li>
+        <li class="productTabs" ng-class="{active:selectedTab == 2}"><a ng-click="setTab(2)">Sheets</a>
+        </li>
+        <li class="productTabs" ng-class="{active:selectedTab == 3}"><a ng-click="setTab(3)">Clothes</a>
+        </li>
+      </ul>
     </div>
+    <div class="row">
+      <div class="col-md-3" ng-show="selectedTab == 1">
+        <h4>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h4>
+      </div>
+      <div class="col-md-3" id="sheets" ng-show="selectedTab == 2">
+        <h4>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </h4>
+      </div>
+      <div class="col-md-3" id="clothes" ng-show="selectedTab == 3">
+        <h4>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            </h4>
+      </div>
+      <div class="clearfix visible-lg"></div>
+    </div>
+  </div>
+  <div>
 </body>
 
 </html>

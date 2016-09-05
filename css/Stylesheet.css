@@ -420,3 +420,7 @@ h1 {
     color: grey;
     border-radius: 10px
 }
+
+.productTabs:active{
+    background-color: grey;
+}
