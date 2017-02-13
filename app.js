@@ -15,7 +15,7 @@ var smtpTransport = nodemailer.createTransport(smtpTransport({
     service: 'Gmail',
     auth: {
         user: 'softwaretextil1234@gmail.com',
-        pass: '******'
+        pass: '****'
     }
 }));
 app.post('/email', urlencodedParser, function(req, res) {
@@ -54,7 +54,7 @@ app.use(express.static(__dirname + '/public'));
 // Send & response function
 
 // set port
-var port = (process.env.PORT || 9000);
+var port = (process.env.PORT || 8080);
 server.listen(port, function() {
     console.log('Server is running...');
 });
